@@ -22,7 +22,7 @@ const Sidebar = ({ user }: SiderbarProps) => {
                 max-xl:size-14"
           />
 
-          <h1 className="sidebar-logo"> Horizon</h1>
+          <h1 className="sidebar-logo">FinServe</h1>
         </Link>
 
         {sidebarLinks.map((item) => {
