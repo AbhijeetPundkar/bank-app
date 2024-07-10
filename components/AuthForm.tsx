@@ -8,6 +8,8 @@ import { useForm } from "react-hook-form";
 import { Button } from "@/components/ui/button";
 import { Form } from "@/components/ui/form";
 import { Loader2 } from "lucide-react";
+import { signIn, signUp } from "@/lib/actions/user.actions";
+import { getLoggedInUser } from "@/lib/actions/user.actions";
 
 import CustomInput from "@/components/CustomInput";
 
@@ -47,8 +49,8 @@ const AuthForm = ({ type }: { type: string }) => {
       }
       if (type === "sign-up") {
         // SIGN UP LOGIC
-        //const newUser = await signUp(data);
-        //setUser(newUser);
+        const newUser = await signUp(data);
+        setUser(newUser);
       }
     } catch (error) {
       console.log(error);
